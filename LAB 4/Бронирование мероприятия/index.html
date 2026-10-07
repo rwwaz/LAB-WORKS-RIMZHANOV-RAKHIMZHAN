@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Бронирование мероприятия</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Бронирование билетов на мероприятие</h1>
+
+  <form id="bookingForm">
+    <label for="name">Имя:</label>
+    <input type="text" id="name" placeholder="Введите ваше имя">
+
+    <label for="email">E-mail:</label>
+    <input type="text" id="email" placeholder="example@mail.com">
+
+    <label for="category">Категория билета:</label>
+    <select id="category">
+      <option value="">Выберите категорию</option>
+      <option value="standard">Стандарт — 5000 тг</option>
+      <option value="vip">VIP — 10000 тг</option>
+    </select>
+
+    <label for="qty">Количество билетов:</label>
+    <input type="number" id="qty" placeholder="Введите количество">
+
+    <label>Дополнительные опции:</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="option" value="dinner" data-price="2000"> Ужин (+2000 тг)</label>
+      <label><input type="checkbox" name="option" value="parking" data-price="500"> Парковка (+500 тг)</label>
+    </div>
+
+    <button type="submit">Рассчитать и забронировать</button>
+  </form>
+
+  <p id="result"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
