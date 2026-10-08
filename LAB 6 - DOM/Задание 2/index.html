@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Задание 12 Модальное окно</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <h1>Модальное окно</h1>
+    <button id="openBtn">Открыть окно</button>
+    <p>Окно закрывается: кнопкой, кликом вне окна, клавишей Escape.</p>
+    <p>Открывали окно раз: <span id="counter">0</span></p>
+  </main>
+
+  <div id="overlay" class="overlay hidden">
+    <div class="modal" role="dialog">
+      <h2>Привет</h2>
+      <p>Это модальное окно</p>
+      <button id="closeBtn">Закрыть</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

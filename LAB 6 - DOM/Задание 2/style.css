@@ -1,0 +1,6 @@
+body { font-family: Arial, sans-serif; background: #8d6d04; text-align: center; padding-top: 60px; }
+button { font-size: 16px; padding: 10px 20px; border: none; border-radius: 8px; background: #f1a2105b; color: #fff; cursor: pointer; }
+.overlay { position: fixed; inset: 0; background: rgba(0,0,0,.55); display: flex; align-items: center; justify-content: center; }
+.overlay.hidden { display: none; }
+.modal { background: #a85303; padding: 30px 40px; border-radius: 12px; text-align: center; animation: pop .25s; }
+@keyframes pop { from { transform: scale(.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
