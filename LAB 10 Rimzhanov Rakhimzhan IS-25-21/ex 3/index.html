@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вариант 19. Доска Kanban</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h1>Доска Kanban</h1>
+
+  <form id="task-form">
+    <input id="title" type="text" placeholder="Название задачи" autocomplete="off">
+    <button type="submit">Добавить</button>
+  </form>
+
+  <p id="message" aria-live="polite"></p>
+
+  <div id="board" class="board"></div>
+
+  <script type="module" src="./main.js"></script>
+
+  <script>
+    window.addEventListener("load", function () {
+      if (!window.__esModulesLoaded) {
+        var s = document.createElement("script");
+        s.src = "./bundle.js";
+        document.body.appendChild(s);
+      }
+    });
+  </script>
+</body>
+</html>
