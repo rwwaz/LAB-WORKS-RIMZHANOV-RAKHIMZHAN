@@ -1,0 +1,7 @@
+{
+  "name": "lab12-variant10-book-catalog",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Лабораторная №12: аутентификация, серверные сессии (без внешних зависимостей)",
+  "scripts": { "start": "node server.js", "test": "node test.js" }
+}
