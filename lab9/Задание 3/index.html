@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Дашборд задач — Fetch API</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>Дашборд задач</h1>
+    <div class="controls">
+      <div class="field">
+        <label for="userId">Пользователь</label>
+        <select id="userId">
+          <option value="all">Все пользователи</option>
+          <option value="1">userId 1</option>
+          <option value="2">userId 2</option>
+          <option value="3">userId 3</option>
+          <option value="4">userId 4</option>
+          <option value="5">userId 5</option>
+          <option value="6">userId 6</option>
+          <option value="7">userId 7</option>
+          <option value="8">userId 8</option>
+          <option value="9">userId 9</option>
+          <option value="10">userId 10</option>
+        </select>
+      </div>
+      <button id="reload" type="button">Обновить данные</button>
+    </div>
+    <p id="status" role="status"></p>
+    <button id="retry" type="button" class="secondary" hidden>Повторить</button>
+
+    <section class="stats" aria-label="Статистика">
+      <div class="stat"><span class="stat-label">Всего</span><span id="total" class="stat-value">0</span></div>
+      <div class="stat done"><span class="stat-label">Выполнено</span><span id="done" class="stat-value">0</span></div>
+      <div class="stat pending"><span class="stat-label">Не выполнено</span><span id="pending" class="stat-value">0</span></div>
+      <div class="stat"><span class="stat-label">Готовность</span><span id="percent" class="stat-value">0%</span></div>
+    </section>
+    <div class="progress" aria-hidden="true"><div id="bar"></div></div>
+
+    <ul id="results" class="todos"></ul>
+    <p id="meta" class="meta"></p>
+  </main>
+</body>
+</html>

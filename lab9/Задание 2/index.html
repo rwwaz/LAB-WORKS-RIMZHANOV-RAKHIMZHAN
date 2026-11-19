@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Публикации пользователя — Fetch API</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>Публикации пользователя</h1>
+    <form id="form">
+      <label for="userId">Пользователь</label>
+      <div class="controls">
+        <select id="userId">
+          <option value="1">userId 1</option>
+          <option value="2">userId 2</option>
+          <option value="3">userId 3</option>
+          <option value="4">userId 4</option>
+          <option value="5">userId 5</option>
+          <option value="6">userId 6</option>
+          <option value="7">userId 7</option>
+          <option value="8">userId 8</option>
+          <option value="9">userId 9</option>
+          <option value="10">userId 10</option>
+        </select>
+        <button id="load" type="submit">Показать публикации</button>
+      </div>
+    </form>
+    <div class="toolbar">
+      <label class="check"><input id="onlyFavorites" type="checkbox"> Только избранное</label>
+      <span id="favoriteCount" class="meta"></span>
+    </div>
+    <p id="status" role="status"></p>
+    <button id="retry" type="button" class="secondary" hidden>Повторить</button>
+    <div id="results"></div>
+    <p id="meta" class="meta"></p>
+  </main>
+</body>
+</html>

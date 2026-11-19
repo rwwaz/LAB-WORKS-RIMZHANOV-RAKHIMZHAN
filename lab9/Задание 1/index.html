@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Данные пользователя — Fetch API</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>Данные пользователя</h1>
+    <form id="form" novalidate>
+      <label for="userId">ID пользователя (1–10)</label>
+      <div class="controls">
+        <input id="userId" type="text" inputmode="numeric" autocomplete="off">
+        <button id="load" type="submit">Найти</button>
+      </div>
+    </form>
+    <p id="status" role="status"></p>
+    <button id="retry" type="button" class="secondary" hidden>Повторить</button>
+    <div id="result"></div>
+    <p id="meta" class="meta"></p>
+  </main>
+</body>
+</html>
