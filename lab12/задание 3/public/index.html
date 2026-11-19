@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Управление пользователями</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Система управления пользователями</h1>
+  <p id="status" role="status"></p>
+
+  <section id="guest">
+    <form id="loginForm" novalidate>
+      <label for="login">Логин</label>
+      <input id="login" autocomplete="username">
+      <label for="password">Пароль</label>
+      <input id="password" type="password" autocomplete="current-password">
+      <button type="submit">Войти</button>
+    </form>
+    <p class="hint">Тестовые учётные записи: <b>admin</b> / Admin#Test2026 (роль admin), <b>ivan</b> / Ivan#Test2026 (роль user).</p>
+  </section>
+
+  <div id="private" hidden>
+    <section>
+      <div class="bar">
+        <div><b id="who"></b> <span class="badge" id="role"></span></div>
+        <button id="logout" class="secondary" type="button">Выйти</button>
+      </div>
+      <p><button id="probe" class="secondary" type="button">Проверить доступ к GET /api/users</button></p>
+    </section>
+
+    <div id="admin" hidden>
+      <section>
+        <h2>Пользователи</h2>
+        <table>
+          <thead><tr><th>Логин</th><th>Имя</th><th>Роль</th><th></th></tr></thead>
+          <tbody id="usersBody"></tbody>
+        </table>
+        <h2>Создать пользователя</h2>
+        <form id="createForm" novalidate>
+          <div class="row">
+            <div><label for="nu">Логин</label><input id="nu"></div>
+            <div><label for="nn">Имя</label><input id="nn"></div>
+            <div><label for="np">Пароль (от 8)</label><input id="np" type="password" autocomplete="new-password"></div>
+            <div><label for="nr">Роль</label><select id="nr"><option>user</option><option>admin</option></select></div>
+          </div>
+          <button type="submit">Создать</button>
+        </form>
+      </section>
+      <section>
+        <div class="bar"><h2>Журнал событий</h2><button id="refreshAudit" class="secondary" type="button">Обновить</button></div>
+        <table>
+          <thead><tr><th>Время</th><th>Событие</th><th>Пользователь</th><th>IP</th><th>Детали</th></tr></thead>
+          <tbody id="auditBody"></tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+</main>
+<script src="common.js"></script>
+<script src="mock.js"></script>
+<script src="mock-core.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
